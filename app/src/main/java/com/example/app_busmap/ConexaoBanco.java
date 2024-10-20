@@ -15,8 +15,8 @@ public class ConexaoBanco {
             politica = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(politica);
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.10.131;"+
-                    "databaseName=bd_BUSMAP2;");
+            conn = DriverManager.getConnection("jdbc:jtds:sqlserver://172.19.1.223;"+
+                    "databaseName=bd_BUSMAP2;user=sa;password=@ITB123456;");
         } catch (SQLException e){
             e.getMessage();
         } catch (ClassNotFoundException e){
